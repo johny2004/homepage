@@ -5,15 +5,18 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   line-height: 1.5;
+  background: linear-gradient(180deg, #f6f7fb 0%, #efeff4 100%);
 
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
+  --durability-text-color: #6a737d;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #e9ecf1;
+  --text-decoration-color: #d87900;
+  --surface-color: #ffffff;
+  --surface-muted: #f8fafc;
 }
 
 .container {
@@ -37,16 +40,35 @@ body {
 
 .resume {
   margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  border: 1px solid #e9ecf1;
+  box-shadow: 0 20px 60px rgba(18, 23, 41, 0.08);
+  background: var(--surface-color);
+  border-radius: 14px;
   padding: 30px 0;
   max-width: 900px;
+}
+
+.main-info {
+  align-items: center;
+  gap: 30px;
+}
+
+.contact_info_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info__block--center {
+  align-items: center;
+  min-width: 140px;
 }
 
 .resume__block {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 576px) {
@@ -63,8 +85,10 @@ body {
     margin-bottom: 20px;
   }
 
-  .experiences {
-    margin-right: 0;
+  .resume {
+    margin: 20px auto;
+    padding: 20px 0;
+    border-radius: 0;
   }
 }
 
@@ -135,6 +159,7 @@ body {
 .intro {
   display: flex;
   justify-content: start;
+  align-items: flex-start;
 }
 
 .intro__icon-wrapper {
@@ -166,18 +191,56 @@ body {
 
 .skills__text {
   color: var(--secondary-text-color);
-  text-align: justify;
+  text-align: left;
+  display: grid;
+  gap: 10px;
+}
+
+.skills__text p {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 4px solid #ffd9a8;
+  background: #fff8ef;
+  border-radius: 6px;
+}
+
+.career-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.career-column {
+  background: var(--surface-muted);
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  padding: 18px;
 }
 
 .experiences {
-  flex: 1 1 60%;
-  margin-right: 50px;
+  margin-right: 0;
 }
 
 .experiences__header {
-  color: var(--secondary-text-color);
+  color: #2b3548;
   text-align: left;
   margin-bottom: 20px;
+  font-size: 1.35rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dbe3ee;
+}
+
+.experiences__company {
+  background: var(--surface-color);
+  border: 1px solid #e5eaf0;
+  border-left: 5px solid #d87900;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.experiences__company:not(:last-child) {
+  margin-bottom: 18px;
 }
 
 .experiences__company-header-durability {
@@ -192,12 +255,12 @@ body {
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .experiences__company-project {
-  margin-left: 15px;
-  margin-bottom: 25px;
+  margin-left: 6px;
+  margin-bottom: 0;
 }
 
 .experiences__company-project-role {
@@ -219,7 +282,23 @@ body {
 }
 
 .additional-info {
-  flex: 1 1 40%;
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.additional-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.additional-info__education,
+.additional-info__languages {
+  background: var(--surface-muted);
+  border: 1px solid #e5eaf0;
+  border-radius: 10px;
+  padding: 16px;
 }
 
 .additional-info__education {
@@ -261,4 +340,33 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.additional-info__certificate {
+  padding: 10px 0;
+}
+
+.additional-info__certificate:not(:last-child) {
+  border-bottom: 1px solid #dde4ee;
+}
+
+.additional-info__certificate-meta {
+  color: var(--durability-text-color);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.additional-info__list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+@media screen and (max-width: 900px) {
+  .career-columns,
+  .additional-info__grid {
+    grid-template-columns: 1fr;
+  }
 }
