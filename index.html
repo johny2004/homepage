@@ -72,15 +72,20 @@
         <section class="resume__block">
           <div class="skills">
             <h3 class="skills__header">Habilidades Técnicas</h3>
-            <p class="skills__text">
-              Lenguajes: Java, Python, JavaScript, HTML, C++ | Desarrollo web: Spring Boot, Angular, Node.js, Selenium | Bases de datos: MySQL, MongoDB, Firebase | Datos y BI: Databricks, Apache Spark, RapidMiner, Power BI | IA: Claude API, RAG, prompt engineering, MCP, agentes de IA | Metodologías: Scrum, Kanban, sprint planning
-            </p>
+            <div class="skills__text">
+              <p><strong>Lenguajes:</strong> Java, Python, JavaScript, HTML, C++</p>
+              <p><strong>Desarrollo web:</strong> Spring Boot, Angular, Node.js, Selenium</p>
+              <p><strong>Bases de datos:</strong> MySQL, MongoDB, Firebase</p>
+              <p><strong>Datos y BI:</strong> Databricks, Apache Spark, RapidMiner, Power BI</p>
+              <p><strong>IA:</strong> Claude API, RAG, prompt engineering, MCP, agentes de IA</p>
+              <p><strong>Metodologías:</strong> Scrum, Kanban, sprint planning</p>
+            </div>
           </div>
         </section>
 
-        <section class="resume__block main-info fh">
-          <div class="experiences">
-            <h3 class="experiences__header">Experiencia Profesional y Proyectos</h3>
+        <section class="resume__block career-columns">
+          <div class="career-column experiences">
+            <h3 class="experiences__header">Experiencia Profesional</h3>
 
             <div class="experiences__company">
               <div class="experiences__company-header">
@@ -116,6 +121,26 @@
                 </ul>
               </div>
             </div>
+
+            <div class="experiences__company">
+              <div class="experiences__company-header">
+                <span class="experiences__company-header-durability">Julio 2025 - Noviembre 2025</span>
+                <h3 class="experiences__company-header-name">Binary Solutions</h3>
+              </div>
+              <div class="experiences__company-project">
+                <span class="experiences__company-project-role">Desarrollador Full Stack | Next.js, React, NestJS, Supabase, PostgreSQL, Vitest, Jest</span>
+                <h3 class="experiences__company-project-name">Plataforma Web de Gestión de Proyectos</h3>
+                <ul class="experiences__company-project-responsibilities">
+                  <li>Desarrollé una plataforma web para la gestión colaborativa de proyectos académicos, con módulos de autenticación, dashboards, proyectos, tareas, documentos, mensajes, cursos, pagos y administración.</li>
+                  <li>Implementé el frontend con Next.js, React, TypeScript, Tailwind CSS y Styled Components, y el backend con NestJS, Node.js, Supabase y PostgreSQL, incorporando autenticación, multi-tenancy, validaciones y control de acceso por roles.</li>
+                  <li>Implementé pruebas automatizadas en frontend y backend con Vitest, React Testing Library, jsdom y Jest, incluyendo pruebas unitarias, de componentes, end-to-end y medición de cobertura.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="career-column projects">
+            <h3 class="experiences__header">Proyectos</h3>
 
             <div class="experiences__company">
               <div class="experiences__company-header">
@@ -166,25 +191,11 @@
                 </ul>
               </div>
             </div>
-
-            <div class="experiences__company">
-              <div class="experiences__company-header">
-                <span class="experiences__company-header-durability">Julio 2025 - Noviembre 2025</span>
-                <h3 class="experiences__company-header-name">Binary Solutions</h3>
-              </div>
-              <div class="experiences__company-project">
-                <span class="experiences__company-project-role">Desarrollador Full Stack | Next.js, React, NestJS, Supabase, PostgreSQL, Vitest, Jest</span>
-                <h3 class="experiences__company-project-name">Plataforma Web de Gestión de Proyectos</h3>
-                <ul class="experiences__company-project-responsibilities">
-                  <li>Desarrollé una plataforma web para la gestión colaborativa de proyectos académicos, con módulos de autenticación, dashboards, proyectos, tareas, documentos, mensajes, cursos, pagos y administración.</li>
-                  <li>Implementé el frontend con Next.js, React, TypeScript, Tailwind CSS y Styled Components, y el backend con NestJS, Node.js, Supabase y PostgreSQL, incorporando autenticación, multi-tenancy, validaciones y control de acceso por roles.</li>
-                  <li>Implementé pruebas automatizadas en frontend y backend con Vitest, React Testing Library, jsdom y Jest, incluyendo pruebas unitarias, de componentes, end-to-end y medición de cobertura.</li>
-                </ul>
-              </div>
-            </div>
           </div>
+        </section>
 
-          <div class="additional-info fv">
+        <section class="resume__block additional-info">
+          <div class="additional-info__grid">
             <div class="additional-info__education">
               <h3 class="additional-info__education-header">Educación</h3>
               <div class="additional-info__education-university">
@@ -197,9 +208,18 @@
 
             <div class="additional-info__languages">
               <h3 class="additional-info__languages-header">Certificaciones</h3>
-              <p class="additional-info__languages-item">Curso de Python desde cero hasta nivel experto - Udemy Formación | Agosto 2025</p>
-              <p class="additional-info__languages-item">Certificate for Building with the Claude API - Anthropic | Mayo 2026</p>
-              <p class="additional-info__languages-item">Certificate for Model Context Protocol: Advanced Topics - Anthropic | Mayo 2026</p>
+              <div class="additional-info__certificate">
+                <p class="additional-info__languages-item"><strong>Curso de Python desde cero hasta nivel experto</strong></p>
+                <p class="additional-info__certificate-meta">Udemy Formación | Agosto 2025</p>
+              </div>
+              <div class="additional-info__certificate">
+                <p class="additional-info__languages-item"><strong>Certificate for Building with the Claude API</strong></p>
+                <p class="additional-info__certificate-meta">Anthropic | Mayo 2026</p>
+              </div>
+              <div class="additional-info__certificate">
+                <p class="additional-info__languages-item"><strong>Certificate for Model Context Protocol: Advanced Topics</strong></p>
+                <p class="additional-info__certificate-meta">Anthropic | Mayo 2026</p>
+              </div>
             </div>
 
             <div class="additional-info__languages">
@@ -209,12 +229,14 @@
 
             <div class="additional-info__languages">
               <h3 class="additional-info__languages-header">Habilidades Blandas</h3>
-              <p class="additional-info__languages-item">Comunicación asertiva</p>
-              <p class="additional-info__languages-item">Adaptabilidad</p>
-              <p class="additional-info__languages-item">Trabajo en equipo</p>
-              <p class="additional-info__languages-item">Aprendizaje continuo</p>
-              <p class="additional-info__languages-item">Persuasión y capacidad de convencimiento</p>
-              <p class="additional-info__languages-item">Percepción</p>
+              <ul class="additional-info__list">
+                <li class="additional-info__languages-item">Comunicación asertiva</li>
+                <li class="additional-info__languages-item">Adaptabilidad</li>
+                <li class="additional-info__languages-item">Trabajo en equipo</li>
+                <li class="additional-info__languages-item">Aprendizaje continuo</li>
+                <li class="additional-info__languages-item">Persuasión y capacidad de convencimiento</li>
+                <li class="additional-info__languages-item">Percepción</li>
+              </ul>
             </div>
           </div>
         </section>
