@@ -43,6 +43,23 @@ body {
   max-width: 900px;
 }
 
+.main-info {
+  align-items: center;
+  gap: 30px;
+}
+
+.contact_info_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info__block--center {
+  align-items: center;
+  min-width: 140px;
+}
+
 .resume__block {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
@@ -135,6 +152,7 @@ body {
 .intro {
   display: flex;
   justify-content: start;
+  align-items: flex-start;
 }
 
 .intro__icon-wrapper {
